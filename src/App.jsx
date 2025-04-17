@@ -1,38 +1,38 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './index.css'; // Importa el archivo que contiene las directivas de Tailwind
+// Importación de hojas de estilo base con TailwindCSS
+import './styles/tailwind.css'
 
+// Importación de componentes de React Router para gestionar las rutas de la aplicación
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Importación de las páginas (vistas) del proyecto
+import Home from './pages/Home'
+
+
+
+/**
+ * Componente principal de la aplicación
+ * 
+ * Define las rutas disponibles dentro de la aplicación
+ * utilizando React Router DOM. Cada ruta carga un componente
+ * correspondiente a la página solicitada.
+ *
+ * @returns {JSX.Element} El layout con las rutas de la aplicación.
+ */
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center justify-center">
-      <div className="flex items-center space-x-4">
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-3xl font-bold mt-8">Vite + React + Tailwind CSS</h1>
-      <div className="card mt-8 p-4 border rounded-lg shadow-lg bg-gray-800">
-        <button
-          onClick={() => setCount((count) => count + 1)}
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-        >
-          count is {count}
-        </button>
-        <p className="mt-4">
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="mt-8 text-center">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  );
+    // Componente que envuelve todas las rutas y habilita el uso de React Router
+    <BrowserRouter>
+      {}
+      <Routes>
+        {/* Ruta principal que carga la página de inicio */}
+        <Route path="/" element={<Home />} />
+
+      
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+// Exportación del componente App para su uso en main.jsx
+export default App
+

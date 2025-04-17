@@ -1,0 +1,20 @@
+/* Estilos para el contenedor de categorías */
+.categories-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 15px 25px; /* Espaciado interno */
+    gap: 100px; /* Separación horizontal entre elementos */
+  }
+  
+  /* Estilos para el texto de las categorías */
+  .category-item {
+    font-size: 1.8rem; /* Tamaño de la letra */
+    font-weight: 500; /* Grosor medio */
+    color: #1f2937; /* Gris oscuro */
+    transition: color 0.3s ease; /* Transición suave para hover */
+  }
+  
+  /* Efecto al pasar el cursor */
+  .category-item:hover {
+    color: #2563eb; /* Azul intenso */
+  }
