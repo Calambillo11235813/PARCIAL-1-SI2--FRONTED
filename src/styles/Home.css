@@ -1,0 +1,38 @@
+/* Contenedor general */
+.home-container {
+  position: relative; /* Necesario para que los elementos hijos se posicionen relativos a este contenedor */
+  padding: 20px;
+}
+
+.title{
+  font-family: "Inter-SemiBold", Helvetica, sans-serif; /* Fuente correcta */
+  font-size: 2rem;
+  right: 30px;
+}
+
+/* Estilo del botón administrativo */
+.admin-button {
+  position: absolute; /* Permite posicionarlo en cualquier lugar del contenedor */
+  top: 20px; /* Espaciado desde la parte superior */
+  right: 26px; /* Espaciado desde la parte derecha */
+  width: 26px; /* Ancho del botón */
+  height: 26px; /* Alto del botón */
+  background-color: #cdd1e1; /* Azul intenso */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Forma circular */
+  display: flex; /* Centra el ícono dentro del botón */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+  background-color: #ced5ea; /* Color azul más oscuro al hacer hover */
+}
+
+/* Estilo para el ícono dentro del botón */
+.icon {
+  width: 20px; /* Ajusta el tamaño del ícono */
+  height: 20px;
+}

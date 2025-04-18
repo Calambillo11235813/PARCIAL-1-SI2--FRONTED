@@ -1,4 +1,8 @@
 import Category from '../components/category'
+import "../styles/Home.css"
+import { useNavigate } from "react-router-dom";
+import userIcon from "../assets/user.svg";
+
 
 /**
  * Página principal Home
@@ -8,10 +12,19 @@ import Category from '../components/category'
  */
 
 function Home() {
+  const navigate = useNavigate();
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Digital Dynamo</h1>
+    <div className="home-container">
+      <h1 className="title">Digital Dynamo</h1>
       
+      {/* Botón que redirige al AdminDashboard */}
+      <button
+        className="admin-button"
+        onClick={() => navigate("/admin")}
+      >
+        <img src={userIcon} alt="User Icon" className="icon" />
+      </button>
+
       {/* Componente que muestra las categorías */}
       <Category />
     </div>

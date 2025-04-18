@@ -1,11 +1,8 @@
-// Importación de hojas de estilo base con TailwindCSS
-import './styles/tailwind.css'
 
-// Importación de componentes de React Router para gestionar las rutas de la aplicación
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
-// Importación de las páginas (vistas) del proyecto
 import Home from './pages/Home'
+import AdminDashboard from './pages/AdminDashboard';
 
 
 
@@ -27,7 +24,9 @@ function App() {
         {/* Ruta principal que carga la página de inicio */}
         <Route path="/" element={<Home />} />
 
-      
+        {/* Nueva ruta que carga el dashboard administrativo */}
+        <Route path="/admin" element={<AdminDashboard />} />
+
       </Routes>
     </BrowserRouter>
   )
