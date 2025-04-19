@@ -38,6 +38,7 @@
   font-size: 16px; /* Tamaño de la fuente */
   text-align: center; /* Centra el texto dentro de cada ítem */
   width: 70%;
+  font-family: "Inter", Helvetica, sans-serif;
 }
 
 .close-button {
@@ -47,8 +48,9 @@
   color: white; /* Texto blanco */
   border: none; /* Sin bordes */
   border-radius: 5px; /* Bordes redondeados */
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer; /* Indica interactividad al pasar el cursor */
+  font-family: "Inter", Helvetica, sans-serif;
 }
 
 .close-button:hover {

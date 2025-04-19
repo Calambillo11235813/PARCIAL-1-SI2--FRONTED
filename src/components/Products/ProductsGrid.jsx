@@ -12,38 +12,44 @@ import React from "react";
  */
 function ProductsGrid({ products, onEdit }) {
   return (
-    <div className="products-grid"> {/* Contenedor principal de la rejilla de productos */}
-      {products.map((product) => ( /* Itera sobre la lista de productos */
-        <div key={product.id_producto} className="product-card"> {/* Tarjeta individual del producto */}
-          
-          {/* Botón para editar el producto */}
-          <button
-            className="edit-button"
-            onClick={() => onEdit(product)} // Llama a la función `onEdit` pasando el producto seleccionado
-          >
-            ✏️ Editar
-          </button>
-          
-          {/* Imagen del producto */}
-          <img
-            src={product.image} // URL de la imagen del producto
-            alt={product.name} // Texto alternativo si la imagen no se carga
-            className="product-image"
-          />
-          
-          {/* Título del producto */}
-          <h3 className="product-title">{product.nombre}</h3>
-          
-          {/* Precio del producto */}
-          <p className="product-price">bs{product.precio}</p>
-          
-          {/* Métricas adicionales del producto */}
-          <div className="product-metrics">
-            <div>Vendido: {product.sales}</div> {/* Cantidad vendida */}
-            <div>Cantidad de productos : {product.stock}</div> {/* Stock disponible */}
+    <div className="products-grid">
+      {products.map((product) => {
+        // Log para verificar los datos de cada producto, especialmente el campo foto_url
+        
+
+        return (
+          <div key={product.id_producto} className="product-card">
+            {/* Botón para editar el producto */}
+            <button
+              className="edit-button"
+              onClick={() => onEdit(product)}
+            >
+              ✏️ Editar
+            </button>
+
+            {/* Imagen del producto */}
+            <img
+              src={product.foto_url || "https://placehold.org/150x150"} // Usa una imagen predeterminada si foto_url no está disponible
+              
+              className="product-image"
+            />
+
+            {/* Título del producto */}
+            <h3 className="product-title">{product.nombre}</h3>
+
+            {/* Precio del producto */}
+            <p className="product-price">bs{product.precio}</p>
+
+            {/* Métricas adicionales del producto */}
+            <div className="product-metrics">
+              <div>Vendido: {product.sales}</div>
+              <div>Cantidad de productos: {product.stock}</div>
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      }
+      )
+      }
     </div>
   );
 }

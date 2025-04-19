@@ -20,6 +20,7 @@ function EditModal({ product, categories ,onClose, onSave }) {
       precio,
       stock: cantidad,
       fecha_creacion: today,
+      foto_url : imagen,
       id_categoria: categoria,
     };
 

@@ -97,9 +97,10 @@
 
 /* Imagen del producto */
 .product-image {
-  width: 100px; /* Establece el ancho de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin-bottom: 10px; /* Espaciado inferior de la imagen */
+  width: 100px; /* Ancho fijo para todas las imágenes */
+  height: 100px; /* Alto fijo para todas las imágenes */
+
+  border-radius: 8px; /* Bordes redondeados opcionales */
 }
 
 /* Título del producto */
