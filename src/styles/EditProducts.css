@@ -1,0 +1,105 @@
+/* ======================================
+   Estilos para el Modal de edición
+====================================== */
+
+/* Contenedor global del modal que cubre toda la pantalla */
+.edit-modal {
+  /* Posición fija para que se mantenga en el viewport */
+  position: fixed;
+  /* Centra el modal empezando en la esquina superior izquierda */
+  top: 0;
+  left: 0;
+  /* Cubre el 100% del ancho y la altura de la ventana */
+  width: 100%;
+  height: 100%;
+  /* Fondo semitransparente para oscurecer el resto de la página */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Usa Flexbox para centrar el contenido del modal */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del contenido del modal (el área blanca con el formulario) */
+.modal-content {
+  /* Fondo blanco para el contenedor del modal */
+  background-color: #ffffff;
+  /* Espaciado interno para separar el contenido de los bordes */
+  padding: 20px;
+  /* Bordes redondeados para un look más suave */
+  border-radius: 10px;
+  /* Ancho fijo para el modal */
+  width: 00px;
+  /* Sombra para dar profundidad y resaltar el contenedor */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el encabezado (h2) dentro del modal */
+.modal-content h2 {
+  /* Margen inferior para separar el título del contenido siguiente */
+  margin-bottom: 20px;
+}
+
+/* Estilos para las etiquetas (label) dentro del modal */
+.modal-content label {
+  /* Mostrar cada etiqueta en línea de bloque para ocupar el ancho completo */
+  display: block;
+  /* Margen inferior para separar cada campo del formulario */
+  margin-bottom: 10px;
+  font-family: "Inter", Helvetica, sans-serif;
+}
+
+/* Estilos para los inputs dentro del modal */
+.modal-content input {
+  /* Ancho completo para que se ajuste al contenedor */
+  width: 100%;
+  /* Espaciado interno para mayor comodidad al escribir */
+  padding: 8px;
+  /* Margen inferior para separar un campo del siguiente */
+  margin-bottom: 15px;
+  /* Borde sutil de color gris claro */
+  border: 1px solid #ccc;
+  /* Bordes redondeados para una apariencia amigable */
+  border-radius: 5px;
+}
+
+/* ======================================
+   Estilos para las acciones (botones) del modal
+====================================== */
+
+/* Contenedor para los botones del modal (por ejemplo, Cancelar y Guardar) */
+.modal-actions {
+  /* Uso de Flexbox para colocar los botones en una línea */
+  display: flex;
+  /* Distribuye los botones equitativamente, dejando espacio entre ellos */
+  justify-content: space-between;
+}
+
+/* Estilo general para todos los botones dentro de .modal-actions */
+.modal-actions button {
+  /* Espaciado interno para que los botones sean fácilmente clickeables */
+  padding: 10px 20px;
+  /* Sin borde para un estilo más moderno */
+  border: none;
+  /* Bordes redondeados */
+  border-radius: 5px;
+  /* Cursor de puntero para indicar que se puede hacer clic */
+  cursor: pointer;
+}
+
+/* Estilo específico para el primer botón (usualmente 'Cancelar') */
+.modal-actions button:first-child {
+  /* Fondo en tono gris claro */
+  background-color: #e5e7eb;
+  /* Color de texto oscuro */
+  color: #333;
+}
+
+/* Estilo específico para el último botón (usualmente 'Guardar') */
+.modal-actions button:last-child {
+  /* Fondo azul para destacar la acción principal */
+  background-color: #2563eb;
+  /* Texto en blanco para mejor contraste */
+  color: white;
+}
+  

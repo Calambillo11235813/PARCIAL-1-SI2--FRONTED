@@ -6,6 +6,7 @@ import EditProducts from "./EditProducts";
 import ProductsHeader from "./ProductsHeader";
 import ProductsGrid from "./ProductsGrid";
 import CategoryListModal from "./CategoryLisModal";
+import AddProduct from "./AddProduct";
 
 /**
  * Componente principal: Products
@@ -14,6 +15,7 @@ import CategoryListModal from "./CategoryLisModal";
  */
 function Products() {
   const [products, setProducts] = useState([]);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [categoriesVisible, setCategoriesVisible] = useState(false);
@@ -37,6 +39,7 @@ function Products() {
     };
     loadProducts(); // Ejecuta la función de carga
   }, []);
+
 
   useEffect(() => {
     const loadCategories = async () => {
@@ -68,9 +71,11 @@ function Products() {
     <div className="products-container">
       {/* Componente de encabezado que incluye breadcrumbs y botones */}
       <ProductsHeader
+         
         onSelectCategory={(categoryId) => setSelectedCategory(categoryId)} // Selecciona una categoría
         onToggleCategories={() => setCategoriesVisible((prev) => !prev)} // Alterna la visibilidad del modal de categorías
         onShowAll={() => setSelectedCategory(null)} // Restablece la categoría seleccionada
+        onAddProduct={() => setIsAddModalOpen(true)} 
       />
 
       {/* Modal de selección de categorías */}
@@ -109,6 +114,21 @@ function Products() {
           }}
         />
       )}
+
+       
+      {/* Modal de añadir producto */}
+      {isAddModalOpen && (
+        <AddProduct
+          categories={categories}
+          onClose={() => setIsAddModalOpen(false)}
+          onSave={(newProduct) => {
+            // Actualiza la lista de productos agregando el nuevo producto
+            setProducts((prev) => [...prev, newProduct]);
+          }}
+        />
+      )}
+
+
     </div>
   );
 }

@@ -10,12 +10,18 @@ import React from "react";
  * - `onToggleCategories`: Función que alterna la visibilidad del modal o contenedor de categorías.
  * - `onShowAll`: Función para mostrar todos los productos (no utilizada directamente aquí).
  */
-function ProductsHeader({ onSelectCategory, onToggleCategories, onShowAll }) {
+function ProductsHeader({ onSelectCategory, onToggleCategories, onShowAll , onAddProduct}) {
   return (
     <header className="products-header"> {/* Contenedor principal del encabezado */}
       <div className="breadcrumbs">Todos los productos</div> {/* Ruta de navegación */}
 
       <div className="buttons-container"> {/* Contenedor para los botones */}
+
+         {/* Botón para mostrar todos los productos */}
+         <button className="Categories" onClick={onShowAll}>
+          ver todo
+        </button>
+
         
         {/* Botón para alternar la visibilidad de las categorías */}
         <button
@@ -26,7 +32,10 @@ function ProductsHeader({ onSelectCategory, onToggleCategories, onShowAll }) {
         </button>
 
         {/* Botón para añadir un nuevo producto */}
-        <button className="add-product-button">Añadir nuevo productos</button>
+        <button className="add-product-button" onClick={onAddProduct}>
+          Añadir nuevo productos
+        </button>
+
       </div>
     </header>
   );

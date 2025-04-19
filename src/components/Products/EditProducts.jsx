@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/EditModal.css";
+import "../../styles/EditProducts.css";
 import { updateProduct } from "../../services/ProductsService"; // Ajusta la ruta si es necesario
 
 function EditModal({ product, categories ,onClose, onSave }) {
