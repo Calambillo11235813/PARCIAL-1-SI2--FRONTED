@@ -1,5 +1,6 @@
 /* Fondo general con gradiente azul */
 .form-page {
+
     background-color: #114ef3;
     min-height: 100vh;
     display: flex;

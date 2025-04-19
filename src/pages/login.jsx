@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import axios from '../api/axiosConfig';
 import '../styles/login.css'; 
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const [credentials, setCredentials] = useState({
@@ -31,28 +32,34 @@ const Login = () => {
     };
 
     return (
-        <div className="login-container">
-            <h2>Iniciar sesión</h2>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Correo electrónico"
-                    value={credentials.email}
-                    onChange={handleChange}
-                    required
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Contraseña"
-                    value={credentials.password}
-                    onChange={handleChange}
-                    required
-                />
-                <button type="submit">Entrar</button>
-            </form>
-            <p>¿No tienes cuenta? <a href="/register">Regístrate</a></p>
+        <div className='form-page'>
+            <div className="login-container">
+                <h2>Iniciar sesión</h2>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Correo electrónico"
+                        value={credentials.email}
+                        onChange={handleChange}
+                        required
+                    />
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Contraseña"
+                        value={credentials.password}
+                        onChange={handleChange}
+                        required
+                    />
+                    <button type="submit">Entrar</button>
+                </form>
+                <p>
+                <Link to="/registro" className="register-link">
+                    ¿No tienes cuenta? Regístrate 
+                </Link>
+                </p>
+            </div>
         </div>
     );
 };

@@ -1,21 +1,18 @@
-/* Fondo general */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to bottom right, #0a2342, #124076);
+.form-page {
+
+    background-color: #114ef3;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    font-family: "Inter-SemiBold", Helvetica, sans-serif;
 }
-
 /* Contenedor del formulario */
 .login-container {
     background-color: white;
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     width: 90%;
     max-width: 400px;
     text-align: center;
@@ -25,7 +22,6 @@ body {
 .login-container h2 {
     margin-bottom: 1.5rem;
     color: #0a2342;
-    font-weight: 600;
 }
 
 /* Inputs */
@@ -43,20 +39,21 @@ body {
 
 /* Botón */
 .login-container button {
-    width: 90%;
+    width: 100%;
     padding: 12px;
-    margin-top: 1rem;
-    background-color: #0044ff;
+    background-color: #114ef3;
     color: white;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 1rem;
     border: none;
     border-radius: 10px;
+    margin-top: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
 
 .login-container button:hover {
-    background-color: #0033cc;
+    background-color: #1345d1;
 }
 
 /* Enlace a registro (opcional) */
@@ -65,8 +62,30 @@ body {
     font-size: 0.9rem;
 }
 
-.login-container a {
-    color: #0044ff;
-    font-weight: 500;
+.register-link {
+    display: block;
+    margin-top: 1.5rem;
+    color: #114ef3;
+    font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s;
 }
+.register-link:hover {
+    color: #1345d1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+
+    .login-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .login-container button {
+        font-size: 0.95rem;
+    }
+}
+
