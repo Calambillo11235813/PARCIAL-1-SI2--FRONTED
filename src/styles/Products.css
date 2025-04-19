@@ -1,0 +1,99 @@
+.product-card {
+  position: relative; /* Para posicionar elementos dentro de la tarjeta */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+.edit-button {
+  position: absolute; /* Ubicación absoluta dentro de la tarjeta */
+  top: 10px; /* Distancia desde el borde superior */
+  right: 10px; /* Distancia desde el borde derecho */
+  background-color: #2563eb; /* Color del botón */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 5px 10px;
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  font-size: 12px;
+}
+
+.edit-button:hover {
+  background-color: #1d4ed8; /* Color más oscuro al pasar el mouse */
+}
+
+.products-container {
+    padding: 20px;
+    font-family: "Inter-SemiBold", Helvetica, sans-serif;
+  }
+  
+  .products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .breadcrumbs {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .add-product-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-product-button:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .product-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+  
+  .product-price {
+    font-size: 14px;
+    color: #2563eb;
+    margin: 5px 0;
+  }
+  
+  .product-summary {
+    font-size: 12px;
+    color: #6b7280;
+    margin: 10px 0;
+  }
+  
+  .product-metrics {
+    font-size: 12px;
+    color: #374151;
+  }
+  

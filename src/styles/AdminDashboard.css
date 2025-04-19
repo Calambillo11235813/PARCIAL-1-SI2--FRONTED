@@ -1,57 +1,49 @@
-/* Estilo general para el contenedor del dashboard */
 .admin-dashboard {
-    display: flex; /* Crea un diseño en dos columnas */
-    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
-    background-color: #f3f4f6; /* Fondo gris claro */
-  }
+  display: flex;
+  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+  font-family: "Inter-SemiBold", Helvetica, sans-serif; /* Nueva fuente */
+}
+
+.sidebar {
+  width: 250px; /* Fija el ancho del menú lateral */
+  background-color: #114ef3; /* Azul oscuro */
+  color: white;
+  padding: 20px;
   
-  /* Estilo para el menú lateral */
-  .sidebar {
-    width: 250px; /* Define el ancho fijo del menú */
-    background-color: #1d4ed8; /* Fondo azul oscuro */
-    color: white; /* Texto blanco */
-    padding: 20px; /* Espaciado interno */
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1); /* Sombra lateral */
-  }
-  
-  /* Título del menú */
-  .sidebar-title {
-    font-size: 1.5rem; /* Tamaño de fuente grande */
-    font-weight: bold; /* Negrita */
-    margin-bottom: 20px; /* Separación inferior */
-  }
-  
-  /* Estilo para los elementos del menú */
-  .sidebar-menu {
-    list-style: none; /* Elimina los puntos de la lista */
-    padding: 0; /* Elimina padding interno */
-  }
-  
-  .menu-item {
-    padding: 10px 15px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambia el cursor a "puntero" */
-    transition: background-color 0.3s ease; /* Animación para hover */
-  }
-  
-  .menu-item:hover {
-    background-color: #2563eb; /* Fondo azul más claro */
-  }
-  
-  /* Área principal */
-  .main-content {
-    flex: 1; /* Ocupa el espacio restante */
-    padding: 30px; /* Espaciado interno */
-  }
-  
-  .main-title {
-    font-size: 2rem; /* Tamaño grande del título */
-    font-weight: bold; /* Negrita */
-    color: #1f2937; /* Texto gris oscuro */
-    margin-bottom: 20px; /* Separación inferior */
-  }
-  
-  .main-description {
-    font-size: 1rem; /* Tamaño de fuente normal */
-    color: #4b5563; /* Texto gris claro */
-  }
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Inter", Helvetica, sans-serif;
+}
+
+.sidebar li:hover {
+  background-color: #2563eb; /* Azul más claro al pasar el mouse */
+}
+
+.main-content {
+  flex: 1; /* Hace que el área principal ocupe el espacio restante */
+  padding: 30px;
+  background-color: #f3f4f6; /* Fondo gris claro */
+}
+
+.main-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  color: #4b5563; /* Texto gris */
+}

@@ -3,6 +3,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import AdminDashboard from './pages/AdminDashboard';
+import Products from "./components/Products/Products";
 
 
 
@@ -26,7 +27,10 @@ function App() {
 
         {/* Nueva ruta que carga el dashboard administrativo */}
         <Route path="/admin" element={<AdminDashboard />} />
-
+     
+        {/* Ruta para la página de productos */}
+        <Route path="/productos" element={<Products />} />
+        
       </Routes>
     </BrowserRouter>
   )

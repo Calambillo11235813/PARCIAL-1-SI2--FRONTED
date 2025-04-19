@@ -1,36 +1,36 @@
 import React from "react";
-import "../styles/AdminDashboard.css"; // Importar el archivo CSS personalizado
+import { useNavigate } from "react-router-dom"; // Hook para manejar la navegación
+import "../styles/AdminDashboard.css";
+import "../styles/tailwind.css";
 
-/**
- * Componente AdminDashboard
- * Representa el panel de administración para gestionar la tienda.
- * Incluye un menú lateral y un área principal donde se mostrará contenido dinámico.
- */
 function AdminDashboard() {
+  const navigate = useNavigate(); // Hook para realizar la navegación
+
   return (
     <div className="admin-dashboard">
       {/* Menú lateral */}
       <aside className="sidebar">
-        <h2 className="sidebar-title">Admin Panel</h2>
-        <ul className="sidebar-menu">
-          {/* Elementos del menú lateral */}
-          <li className="menu-item">Inicio</li>
-          <li className="menu-item">Productos</li>
-          <li className="menu-item">Pedidos</li>
-          <li className="menu-item">Usuarios</li>
-          <li className="menu-item">Configuración</li>
+        <h2>Admin Panel</h2>
+        <ul>
+          {/* Opciones del menú lateral con navegación */}
+          <li onClick={() => navigate("/")}>Inicio</li>
+          <li onClick={() => navigate("/productos")}>Productos</li>
+          <li onClick={() => navigate("/pedidos")}>Pedidos</li>
+          <li onClick={() => navigate("/usuarios")}>Usuarios</li>
+          <li onClick={() => navigate("/notificaciones")}>Notificaciones</li>
+          <li onClick={() => navigate("/configuraciones")}>Configuraciones</li>
         </ul>
       </aside>
 
-      {/* Área principal */}
+      {/* Área de contenido principal */}
       <main className="main-content">
-        <h1 className="main-title"> Panel de Administración</h1>
-        <p className="main-description">
-          Aquí puedes gestionar todo lo relacionado con tu tienda.
-        </p>
+        <h1>Bienvenido al Panel de Administración</h1>
+        <p>Aquí puedes gestionar tu tienda.</p>
       </main>
     </div>
   );
 }
 
-export default AdminDashboard; // Exportar el componente para su uso en otras partes de la aplicación
+export default AdminDashboard;
+
+
