@@ -44,8 +44,11 @@ export const addProduct = async (product) => {
  * @param {Object} updatedData - Datos actualizados del producto.
  * @returns {Promise} Una promesa que contiene la respuesta del backend.
  */
+
+
 export const updateProduct = async (productId, updatedData) => {
   try {
+    console.log("Datos enviados al backend:", updatedData);
     // Realiza la solicitud PUT al backend con los datos actualizados
     const response = await axios.put(`${BASE_URL}${productId}/`, updatedData);
     return response.data; // Retorna la respuesta del backend

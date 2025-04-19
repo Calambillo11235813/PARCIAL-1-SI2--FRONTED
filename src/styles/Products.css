@@ -1,99 +1,130 @@
+/* Estilos para las tarjetas de producto */
 .product-card {
-  position: relative; /* Para posicionar elementos dentro de la tarjeta */
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
+  position: relative; /* Posiciona elementos dentro de la tarjeta */
+  background-color: #ffffff; /* Fondo blanco para la tarjeta */
+  border: 1px solid #e5e7eb; /* Borde gris claro */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px; /* Espaciado interno dentro de la tarjeta */
+  text-align: center; /* Centra el contenido horizontalmente */
 }
 
+/* Estilos para el botón de edición en las tarjetas */
 .edit-button {
-  position: absolute; /* Ubicación absoluta dentro de la tarjeta */
-  top: 10px; /* Distancia desde el borde superior */
-  right: 10px; /* Distancia desde el borde derecho */
-  background-color: #2563eb; /* Color del botón */
-  color: white; /* Color del texto */
-  border: none; /* Sin bordes */
-  border-radius: 5px; /* Bordes redondeados */
-  padding: 5px 10px;
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  font-size: 12px;
+  position: absolute; /* Permite posicionar el botón dentro de la tarjeta */
+  top: 10px; /* Espaciado desde la parte superior de la tarjeta */
+  right: 10px; /* Espaciado desde el borde derecho de la tarjeta */
+  background-color: #2563eb; /* Fondo azul del botón */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes alrededor del botón */
+  border-radius: 5px; /* Bordes redondeados del botón */
+  padding: 5px 10px; /* Espaciado interno del botón */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse sobre el botón */
+  font-size: 12px; /* Tamaño del texto del botón */
 }
 
+/* Estilo del botón de edición cuando el mouse está sobre él */
 .edit-button:hover {
-  background-color: #1d4ed8; /* Color más oscuro al pasar el mouse */
+  background-color: #1d4ed8; /* Cambia el color de fondo a un azul más oscuro */
 }
 
+/* Contenedor principal de la página de productos */
 .products-container {
-    padding: 20px;
-    font-family: "Inter-SemiBold", Helvetica, sans-serif;
-  }
+  padding: 20px; /* Espaciado interno del contenedor */
+  font-family: "Inter-SemiBold", Helvetica, sans-serif; /* Fuente de texto */
+}
+
+/* Encabezado de la página */
+.products-header {
+  display: flex; /* Usa Flexbox para alinear elementos horizontalmente */
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  align-items: center; /* Centra los elementos verticalmente */
+  margin-bottom: 20px; /* Espaciado inferior del encabezado */
+  gap: 20pX;
+}
+
+/* Estilo del texto de navegación (breadcrumbs) */
+.breadcrumbs {
+  font-size: 14px; /* Tamaño de fuente pequeño */
+  color: #6b7280; /* Color gris oscuro */
   
-  .products-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .breadcrumbs {
-    font-size: 14px;
-    color: #6b7280;
-  }
-  
-  .add-product-button {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .add-product-button:hover {
-    background-color: #1d4ed8;
-  }
-  
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .product-card {
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .product-image {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .product-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin: 5px 0;
-  }
-  
-  .product-price {
-    font-size: 14px;
-    color: #2563eb;
-    margin: 5px 0;
-  }
-  
-  .product-summary {
-    font-size: 12px;
-    color: #6b7280;
-    margin: 10px 0;
-  }
-  
-  .product-metrics {
-    font-size: 12px;
-    color: #374151;
-  }
-  
+}
+
+.buttons-container {
+  display: flex; /* Contenedor para los botones */
+  gap: 20px; /* Espaciado entre los botones */
+}
+
+/* Botón para seleccionar categorías */
+.Categories {
+  background-color: #2563eb; /* Fondo azul del botón */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado interno para el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  /*margin-left: 600px; /* Mueve el botón hacia la derecha */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+
+
+
+
+
+
+
+
+/* Botón para añadir nuevos productos */
+.add-product-button {
+  background-color: #2563eb; /* Fondo azul del botón */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+/* Estilo del botón para añadir productos cuando el mouse está sobre él */
+.add-product-button:hover {
+  background-color: #1d4ed8; /* Cambia el color de fondo a un azul más oscuro */
+}
+
+/* Contenedor de las tarjetas de producto */
+.products-grid {
+  display: grid; /* Usa CSS Grid para organizar los elementos */
+  grid-template-columns: repeat(3, 1fr); /* Divide en tres columnas iguales */
+  gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+/* Imagen del producto */
+.product-image {
+  width: 100px; /* Establece el ancho de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 10px; /* Espaciado inferior de la imagen */
+}
+
+/* Título del producto */
+.product-title {
+  font-size: 16px; /* Tamaño del texto del título */
+  font-weight: bold; /* Texto en negrita */
+  margin: 5px 0; /* Espaciado superior e inferior */
+}
+
+/* Precio del producto */
+.product-price {
+  font-size: 14px; /* Tamaño del texto del precio */
+  color: #2563eb; /* Color azul */
+  margin: 5px 0; /* Espaciado superior e inferior */
+}
+
+/* Resumen del producto */
+.product-summary {
+  font-size: 12px; /* Tamaño del texto del resumen */
+  color: #6b7280; /* Color gris oscuro */
+  margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+/* Métricas del producto */
+.product-metrics {
+  font-size: 12px; /* Tamaño del texto de las métricas */
+  color: #374151; /* Color gris oscuro */
+}

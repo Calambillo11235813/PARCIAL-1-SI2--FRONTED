@@ -1,5 +1,5 @@
 /* Contenedor de categorías */
-.categories-container {
+.categories-container_home {
   display: flex; /* Mantiene las categorías en una fila */
   overflow-x: auto; /* Permite desplazamiento horizontal si hay muchas categorías */
   padding: 15px 25px; /* Espaciado interno */
@@ -7,7 +7,7 @@
 }
 
 /* Estilo de cada elemento de categoría */
-.category-item {
+.category-item_home {
   height: 48px; /* Altura definida */
   width: 135px; /* Ancho definido */
   color: #030712; /* Color del texto */
@@ -22,6 +22,6 @@
 }
 
 /* Efecto hover sobre cada categoría */
-.category-item:hover {
+.category-item_home :hover {
   color: #2563eb; /* Cambia el color del texto a azul al pasar el cursor */
 }

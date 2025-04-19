@@ -49,11 +49,11 @@ function Categories() {
    */
   return (
 
-    <div className="categories-container">
+    <div className="categories-container_home">
     {categories.map((category) => (
       <span
         key={category.id_categoria}
-        className="category-item"
+        className="category-item_home"
       >
         {category.nombre}
       </span>
