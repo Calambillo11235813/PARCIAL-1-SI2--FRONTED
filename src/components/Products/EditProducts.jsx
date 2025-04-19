@@ -1,25 +1,40 @@
 import React, { useState } from "react";
 import "../../styles/EditModal.css"; 
+import { updateProduct } from "../../services/ProductsService"; // Ajusta la ruta si es necesario
+
+
 function EditModal({ product, onClose, onSave }) {
     // Estados locales para manejar los valores editables del producto
-    const [nombre, setNombre] = useState(product.nombre); // Estado para el nombre del producto
-    const [precio, setPrecio] = useState(product.precio); // Estado para el precio del producto
-    const [imagen, setImagen] = useState(product.image); // Estado para la URL de la imagen del producto
-    const [cantidad, setCantidad] = useState(product.stock); // Estado para la cantidad del producto en inventario
+    const today = new Date().toISOString();
+    const [nombre, setNombre] = useState(product.nombre); 
+    const [precio, setPrecio] = useState(product.precio); 
+    const [imagen, setImagen] = useState(product.image); 
+    const [cantidad, setCantidad] = useState(product.stock);
   
     // Función que se ejecuta al guardar los cambios
-    const handleSave = () => {
+    const handleSave = async () => {
       // Crear un objeto con los datos del producto actualizado
       const updatedProduct = {
-        id_producto: product.id_producto, // ID único del producto
-        nombre, // Nombre actualizado
-        precio, // Precio actualizado
-        image: imagen, // URL de la imagen actualizada
-        stock: cantidad, // Cantidad actualizada
+        id_producto: product.id_producto,
+        nombre, 
+        precio, 
+        stock: cantidad, 
+        fecha_creacion: today,
+        id_categoria: product.id_categoria,
       };
   
-      onSave(updatedProduct); // Llama la función pasada como prop para guardar los cambios
-      onClose(); // Cierra el modal después de guardar
+      try {
+        // Llama al servicio para enviar los cambios al backend
+        const response = await updateProduct(product.id_producto, updatedProduct);
+    
+        console.log("Producto actualizado en el backend:", response);
+    
+        // Llama la función pasada como prop para actualizar el estado en el frontend
+        onSave(response);
+        onClose(); // Cierra el modal después de guardar
+      } catch (error) {
+        console.error("Error al actualizar el producto:", error);
+      }
     };
   
     return (

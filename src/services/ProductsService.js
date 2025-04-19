@@ -37,6 +37,25 @@ export const addProduct = async (product) => {
   }
 };
 
+
+/**
+ * Servicio para actualizar un producto en el backend.
+ * @param {string} productId - ID del producto a actualizar.
+ * @param {Object} updatedData - Datos actualizados del producto.
+ * @returns {Promise} Una promesa que contiene la respuesta del backend.
+ */
+export const updateProduct = async (productId, updatedData) => {
+  try {
+    // Realiza la solicitud PUT al backend con los datos actualizados
+    const response = await axios.put(`${BASE_URL}${productId}/`, updatedData);
+    return response.data; // Retorna la respuesta del backend
+  } catch (error) {
+    console.error("Error al actualizar el producto:", error.message);
+    throw error; // Lanza el error para que sea manejado por el componente
+  }
+};
+
+
 /**
  * Servicio para eliminar un producto por su ID.
  * @param {string} productId - ID del producto a eliminar.
