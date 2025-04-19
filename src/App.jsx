@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import AdminDashboard from './pages/AdminDashboard';
 import Products from "./components/Products/Products";
+import Register from './pages/Register';
+import Login from './pages/Login';
 
 
 
@@ -30,6 +32,10 @@ function App() {
      
         {/* Ruta para la página de productos */}
         <Route path="/productos" element={<Products />} />
+
+        {/* ✅ Nuevas rutas para autenticación */}
+        <Route path="/registro" element={<Register />} />
+        <Route path="/login" element={<Login />} />
         
       </Routes>
     </BrowserRouter>

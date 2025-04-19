@@ -26,6 +26,16 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.register-button {
+  position: absolute; /* Permite posicionarlo en cualquier lugar del contenedor */
+  background-color: #114ef3;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  padding: 10%;
+  
+}
 
 .admin-button:hover {
   background-color: #ced5ea; /* Color azul más oscuro al hacer hover */

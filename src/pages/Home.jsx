@@ -25,6 +25,13 @@ function Home() {
         <img src={userIcon} alt="User Icon" className="icon" />
       </button>
 
+      <button
+        className="register-button"
+        variant="text"
+        onClick={() => navigate("/registro")}
+      >
+      Registrarse</button>
+
       {/* Componente que muestra las categorías */}
       <Category />
     </div>
