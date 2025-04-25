@@ -1,24 +1,30 @@
 .admin-dashboard {
   display: flex;
-  min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
-  font-family: "Inter-SemiBold", Helvetica, sans-serif; /* Nueva fuente */
+  min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+  font-family: "Inter-SemiBold", Helvetica, sans-serif;
+  /* Si el panel es parte de un layout global, se mantendrá siempre visible */
 }
 
+/* Sidebar fija en el lado izquierdo */
 .sidebar {
-  width: 250px; /* Fija el ancho del menú lateral */
-  background-color: #114ef3; /* Azul oscuro */
+  position: fixed; /* Fija la sidebar en la ventana */
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #1d4ed8; /* Color de fondo */
   color: white;
   padding: 20px;
-  
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Estilos de la sidebar */
 .sidebar h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
 .sidebar ul {
-  list-style: none; /* Elimina los puntos de la lista */
+  list-style: none;
   padding: 0;
 }
 
@@ -30,20 +36,31 @@
 }
 
 .sidebar li:hover {
-  background-color: #2563eb; /* Azul más claro al pasar el mouse */
+  background-color: #2563eb;
 }
 
+/* Handle para redimensionar */
+.resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px; /* Puedes ajustar el ancho del handle */
+  cursor: col-resize; /* Cambia el cursor al de redimensionar */
+  background-color: transparent; /* O un color semitransparente para hacerlo visible */
+  z-index: 10;
+}
+
+/* Área de contenido principal */
 .main-content {
-  flex: 1; /* Hace que el área principal ocupe el espacio restante */
+  margin-left: 200px; /* Inicialmente igual al ancho por defecto de la sidebar */
   padding: 30px;
-  background-color: #f3f4f6; /* Fondo gris claro */
+  background-color: #f3f4f6;
+  width: calc(100% - 200px);
+  transition: margin-left 0.2s ease, width 0.2s ease; /* Suaviza el cambio de dimensiones */
 }
 
-.main-content h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.main-content p {
-  color: #4b5563; /* Texto gris */
+/* Ajusta dinámicamente el main-content según el ancho de la sidebar */
+.admin-dashboard .sidebar + .main-content {
+  margin-left: 200px;/* Se actualiza dinámicamente como inline style, o puedes usar JavaScript */
 }

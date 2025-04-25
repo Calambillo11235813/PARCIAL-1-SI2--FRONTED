@@ -39,6 +39,7 @@
   text-align: center; /* Centra el texto dentro de cada ítem */
   width: 70%;
   font-family: "Inter", Helvetica, sans-serif;
+  cursor: pointer;
 }
 
 .close-button {

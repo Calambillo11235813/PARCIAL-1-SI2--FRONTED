@@ -7,7 +7,7 @@
 }
 
 /* Estilo de cada elemento de categoría */
-.category-item_home {
+.category-item_home_1 {
   height: 48px; /* Altura definida */
   width: 135px; /* Ancho definido */
   color: #030712; /* Color del texto */
@@ -19,9 +19,10 @@
   text-align: center; /* Centra el texto horizontalmente */
   white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
   transition: color 0.3s ease; /* Transición suave al interactuar */
+  cursor: pointer;
 }
 
 /* Efecto hover sobre cada categoría */
-.category-item_home :hover {
+.category-item_home_1 :hover {
   color: #2563eb; /* Cambia el color del texto a azul al pasar el cursor */
 }

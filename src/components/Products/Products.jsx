@@ -40,7 +40,6 @@ function Products() {
     loadProducts(); // Ejecuta la función de carga
   }, []);
 
-
   useEffect(() => {
     const loadCategories = async () => {
       try {
@@ -50,7 +49,7 @@ function Products() {
         console.error("Error al cargar las categorías:", err);
       }
     };
-  
+
     loadCategories(); // Llama a la función de carga
   }, []);
 
@@ -67,31 +66,39 @@ function Products() {
     setIsModalOpen(true);
   };
 
+  //filtrar productos por categorias :
+  const filteredProducts = products.filter((product) =>
+    selectedCategory ? product.id_categoria === selectedCategory : true
+  );
+  //mostrar el nombre de la categoria 
+  const selectedCategoryName = selectedCategory
+    ? categories.find((cat) => cat.id_categoria === selectedCategory)?.nombre
+    : "Total";
+
   return (
     <div className="products-container">
       {/* Componente de encabezado que incluye breadcrumbs y botones */}
       <ProductsHeader
-         
+        productCount={filteredProducts.length}
+        selectedCategoryName={selectedCategoryName}
         onSelectCategory={(categoryId) => setSelectedCategory(categoryId)} // Selecciona una categoría
         onToggleCategories={() => setCategoriesVisible((prev) => !prev)} // Alterna la visibilidad del modal de categorías
         onShowAll={() => setSelectedCategory(null)} // Restablece la categoría seleccionada
-        onAddProduct={() => setIsAddModalOpen(true)} 
+        onAddProduct={() => setIsAddModalOpen(true)}
       />
 
       {/* Modal de selección de categorías */}
       {categoriesVisible && (
         <CategoryListModal
-        categories={categories} // Lista de categorías desde el estado
-        onSelectCategory={(categoryId) => setSelectedCategory(categoryId)} 
-        onClose={() => setCategoriesVisible(false)} // Función para cerrar el modal
-      />
+          categories={categories} // Lista de categorías desde el estado
+          onSelectCategory={(categoryId) => setSelectedCategory(categoryId)}
+          onClose={() => setCategoriesVisible(false)} // Función para cerrar el modal
+        />
       )}
 
       {/* Grid de productos filtrados por categoría */}
       <ProductsGrid
-        products={products.filter((product) =>
-          selectedCategory ? product.id_categoria === selectedCategory : true
-        )} // Filtra productos según la categoría seleccionada
+        products = {filteredProducts}
         onEdit={handleEdit} // Función para editar productos
       />
 
@@ -99,7 +106,7 @@ function Products() {
       {isModalOpen && (
         <EditProducts
           product={selectedProduct} // Producto seleccionado para editar
-          categories={categories} 
+          categories={categories}
           onClose={() => setIsModalOpen(false)} // Cierra el modal de edición
           onSave={(updatedProduct) => {
             // Actualiza el estado de productos con el producto editado
@@ -115,7 +122,6 @@ function Products() {
         />
       )}
 
-       
       {/* Modal de añadir producto */}
       {isAddModalOpen && (
         <AddProduct
@@ -127,8 +133,6 @@ function Products() {
           }}
         />
       )}
-
-
     </div>
   );
 }

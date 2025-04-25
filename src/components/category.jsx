@@ -53,7 +53,7 @@ function Categories() {
     {categories.map((category) => (
       <span
         key={category.id_categoria}
-        className="category-item_home"
+        className="category-item_home_1"
       >
         {category.nombre}
       </span>

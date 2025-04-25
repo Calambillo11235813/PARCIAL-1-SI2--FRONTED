@@ -43,9 +43,10 @@
 }
 
 /* Estilo del texto de navegación (breadcrumbs) */
-.breadcrumbs {
-  font-size: 14px; /* Tamaño de fuente pequeño */
-  color: #6b7280; /* Color gris oscuro */
+.breadcrumbs_1 {
+  font-family: "Inter-SemiBold", Helvetica, sans-serif; /* Fuente de texto */
+  font-size: 20px; /* Tamaño de fuente pequeño */
+  color: #1d4ed8; /* Color gris oscuro */
   
 }
 
