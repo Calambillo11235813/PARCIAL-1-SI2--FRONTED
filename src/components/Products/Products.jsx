@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../styles/Products.css";
+import "../../styles/products/Products.css";
 import { fetchProducts } from "../../services/ProductsService";
 import { getCategories } from "../../services/categoryservice";
 import EditProducts from "./EditProducts";

@@ -3,7 +3,7 @@ import { useState } from "react";
 import HomeHeader from "../components/HomeHeader";
 import Categories from "../components/Category";
 import ProductCatalog from "../components/Products/ProductCatalog";
-import "../styles/Home.css";
+import "../styles/page/Home.css";
 
 function Home() {
   // Estado para determinar qué sección se muestra: 'productos', 'categorias', etc.

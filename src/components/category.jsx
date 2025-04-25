@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import { getCategories } from '../services/categoryservice';
-import '../styles/tailwind.css';
+
 import '../styles/category.css';
 
 /**

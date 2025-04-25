@@ -1,6 +1,6 @@
 // src/components/HomeHeader.jsx
 import React from "react";
-import "../styles/HomeHeader.css";
+import "../styles/page/HomeHeader.css";
 
 function HomeHeader({ onSectionChange }) {
   return (

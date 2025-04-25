@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/CategoryLisModal.css"; // Asegúrate de crear este archivo CSS
+import "../../styles/products/CategoryLisModal.css"; // Asegúrate de crear este archivo CSS
 
 function CategoryListModal({ categories, onSelectCategory, onClose }) {
     return (

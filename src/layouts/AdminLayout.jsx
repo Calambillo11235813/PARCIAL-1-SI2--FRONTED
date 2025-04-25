@@ -1,7 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
-import "../styles/AdminDashboard.css";
-import "../styles/tailwind.css";
+import "../styles/page/AdminDashboard.css";
 
 function AdminLayout() {
   const navigate = useNavigate();

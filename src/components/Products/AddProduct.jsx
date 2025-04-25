@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/EditProducts.css"; // Se usa el mismo estilo definido para editar productos
+import "../../styles/Products/EditProducts.css"; // Se usa el mismo estilo definido para editar productos
 import { addProduct } from "../../services/ProductsService"; // Asumiendo que ya tienes esta función
 
 function AddProduct({ categories, onClose, onSave }) {
